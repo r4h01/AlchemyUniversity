@@ -8,6 +8,9 @@ app.use(express.json())
 
 let balances
 
+app.get("/", (req, res) => {
+  res.send({ message:"HELLO" })
+})
 app.get("/balance/:address", (req, res) => {
   const { address } = req.params
   const balance = balances[address] || 0
