@@ -74,6 +74,40 @@ function GenerateKeyPair({address, setAddress, currentStep, setCurrentStep, comp
             ? "Confirm" : `Next`}</button>
         
          </div>
+         {currentStep ===4 ? (
+                <div className="mt-3 overflow-hidden bg-purple-800 shadow border-slate-300 border-2 sm:rounded-lg">
+                <div className="px-4 py-5 sm:px-6">
+                  <h3 className="text-base font-semibold leading-6 text-stone-50">Information</h3>
+                </div>
+                <div className="border-t border-gray-200">
+                  <dl>
+                    <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                      <dt className="text-sm font-medium text-gray-800">1 </dt>
+                      <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">Copy the Private and Public Key</dd>
+                    </div>
+                  </dl>
+                  <dl>
+                    <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                      <dt className="text-sm font-medium text-gray-800">2</dt>
+                      <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 break-words sm:mt-0">use the Public Key in the wallet section <br></br> for showing the balance</dd>
+                    </div>
+                  </dl>
+                  <dl>
+                    <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                      <dt className="text-sm font-medium text-gray-800">3</dt>
+                      <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 break-words sm:mt-0">Paste a different Address and set the amount</dd>
+                    </div>
+                  </dl>
+                  <dl>
+                    <div className="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                      <dt className="text-sm font-medium text-gray-800">4</dt>
+                      <dd className="mt-1 text-sm text-gray-900 sm:col-span-2 break-words sm:mt-0">use the Private Key in the Send section <br></br> for generate a signature</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+          
+          ): ""}
          {publicKeys.length>0 ? (<div className='bg-purple-800 rounded-lg mt-5 flex flex-col py-10 text-xs justify-center border-slate-300 border-2'>
             {renderKeyPair}
          </div> ): ""}
