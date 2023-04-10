@@ -28,7 +28,7 @@ function GenerateKeyPair({address, setAddress, currentStep, setCurrentStep, comp
             for (let i = 0; i < publicKeys.length; i++) {
                 bodyAddresses[publicKeys[i].toString()]=balances[i]
             }
-            console.log(bodyAddresses)
+            
             try {
                 const setAddress = await server.post(`/set-address`, {bodyAddresses:bodyAddresses} );
                 console.log(setAddress.data)
